@@ -65,17 +65,24 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+           
 
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-          
-            if (direction.magnitude >= 0.1f && !isPlaying(anim, "Jump"))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                controller.Move(moveDirection.normalized * speed * Time.deltaTime);
-                anim.SetBool("Run", true);
 
+
+                anim.SetTrigger("Jab");
+            }
+            else if (direction.magnitude >= 0.1f && !isPlaying(anim, "Jump"))
+            {
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                    controller.Move(moveDirection.normalized * speed * Time.deltaTime);
+                anim.SetBool("Run", true);
             }
             else
             {
@@ -89,12 +96,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
                 anim.SetTrigger("Jump");
             }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-    
-
-                anim.SetTrigger("Jab");
-            }
+            
         }
         
 
