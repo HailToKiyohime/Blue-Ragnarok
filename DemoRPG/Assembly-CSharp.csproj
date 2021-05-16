@@ -55,9 +55,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\rpg animations\scripts\HidingMachineBehaviour.cs" />
     <Compile Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\CameraController.cs" />
     <Compile Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Scripts\IdleChanger.cs" />
+    <Compile Include="Assets\rpg animations\scripts\WeaponHide.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\rpg animations\scripts\HiderInTime.cs" />
+    <Compile Include="Assets\rpg animations\scripts\WorldInteraction.cs" />
+    <Compile Include="Assets\rpg animations\scripts\UI_no_weapon.cs" />
+    <Compile Include="Assets\rpg animations\scripts\ScrollSwitcher.cs" />
+    <Compile Include="Assets\rpg animations\scripts\UI_sword.cs" />
+    <Compile Include="Assets\rpg animations\scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

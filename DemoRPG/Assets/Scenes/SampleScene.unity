@@ -621,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -748,7 +748,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.10872695, y: -0.002348774, z: 0.00025689875, w: 0.99406886}
+  m_LocalRotation: {x: 0.10872705, y: -0.0019010371, z: 0.00020792721, w: 0.9940698}
   m_LocalPosition: {x: -34.545, y: -29.740002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -858,6 +858,25 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 53383c83dfcb60e49ae25d068c254028, type: 2}
+    - target: {fileID: 9500000, guid: a7ad49df78a89c94da215784cfb987ba, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightFoot'\n\tTransform
+        'Character1_LeftHandThumb3'\n\tTransform 'Character1_RightToeBase'\n\tTransform
+        'Character1_LeftFoot'\n\tTransform 'Character1_RightHandThumb1'\n\tTransform
+        'Character1_LeftHandIndex1'\n\tTransform 'Character1_LeftHandRing3'\n\tTransform
+        'Character1_RightHandRing2'\n\tTransform 'Character1_RightHandPinky3'\n\tand
+        more ...\n\tFrom animation clip 'Run'\n\tFrom animation clip 'Hikick'\n\tFrom
+        animation clip 'RISING_P'\n\tFrom animation clip 'Jab'\n\tFrom animation
+        clip 'Headspring'\n\tFrom animation clip 'Land'\n\tFrom animation clip 'Spinkick'\n\tFrom
+        animation clip 'DamageDown'\n\tFrom animation clip 'ScrewKick'\n\tFrom animation
+        clip 'JUMP00'\n\tand more ..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: a7ad49df78a89c94da215784cfb987ba, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: a7ad49df78a89c94da215784cfb987ba, type: 3}
       propertyPath: m_AABB.m_Center.y
       value: 1.380296
@@ -1391,7 +1410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642561950}
-  m_LocalRotation: {x: 0.12451544, y: 0.000000013404497, z: -0.0000000016821579, w: 0.99221766}
+  m_LocalRotation: {x: 0.12451546, y: -0.000000025913982, z: 0.0000000032519998, w: 0.99221766}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1526,7 +1545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700941871}
-  m_LocalRotation: {x: 0.10872694, y: -0.0023487739, z: 0.0002568987, w: 0.99406886}
+  m_LocalRotation: {x: 0.108727045, y: -0.0019010367, z: 0.00020792715, w: 0.9940698}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

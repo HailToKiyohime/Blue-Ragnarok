@@ -74,7 +74,11 @@ public class ThirdPersonMovement : MonoBehaviour
             {
 
 
-                anim.SetTrigger("Jab");
+                anim.SetTrigger("Slash");
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                anim.SetTrigger("Slash2");
             }
             else if (direction.magnitude >= 0.1f && !isPlaying(anim, "Jump"))
             {
