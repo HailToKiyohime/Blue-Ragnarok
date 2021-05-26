@@ -20,8 +20,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     [SerializeField] private float jumpHeight;
     Animator anim;
-    
 
+    int combo = 1;
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -65,19 +65,20 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-           
 
+            
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) && (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsName("Run")))
             {
+                combo = 2;
 
-
-                anim.SetTrigger("Slash");
+                anim.SetTrigger("Slash");                                                                                                                                                                                                                           
             }
-            else if (Input.GetKeyDown(KeyCode.G))
+            else if (Input.GetKeyDown(KeyCode.F) && anim.GetCurrentAnimatorStateInfo(0).IsName("Slash1"))
             {
+                combo = 3;
                 anim.SetTrigger("Slash2");
             }
             else if (direction.magnitude >= 0.1f && !isPlaying(anim, "Jump"))
@@ -100,10 +101,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
                 anim.SetTrigger("Jump");
             }
-            
+
+           if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                combo = 1;
+            }
+
+
         }
         
-
+     
 
         //Calculate Gravity
         velocity.y += gravity * Time.deltaTime;
